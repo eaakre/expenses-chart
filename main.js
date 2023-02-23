@@ -35,7 +35,7 @@ for (let i = 0; i < data.length; i++) {
     // change color of current day bar based on Current Date object
     if (i + 1 === weekday) {
         dayBar.style.background = 'var(--cyan)';
-        dayAmount.style.background = 'var(--dark-brown)';
+        // dayAmount.style.background = 'var(--dark-brown)';
     }
     
     chart.appendChild(dayChart);
