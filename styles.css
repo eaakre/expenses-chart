@@ -1,0 +1,167 @@
+:root {
+    --soft-red: hsl(10, 79%, 65%);
+    --cyan: hsl(186, 34%, 60%);
+    --cream: hsl(27, 66%, 92%);
+    --dark-brown: hsl(25, 47%, 15%);
+    --medium-brown: hsl(28, 10%, 53%);
+    --pale-orange: hsl(33, 100%, 98%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+    font-size: 18px;
+}
+
+body {
+    background-color: var(--cream);
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+}
+
+.red {
+    background-color: var(--soft-red);
+}
+
+.white {
+    background-color: var(--pale-orange);
+}
+
+.brown {
+    background-color: var(--dark-brown);
+}
+
+.dark {
+    color: var(--dark-brown);
+}
+
+.gray {
+    color: var(--medium-brown);
+}
+
+.small-text {
+    font-size: 10px;
+}
+
+.large-text {
+    font-size: 24px;
+}
+
+.heavy {
+    font-weight: 700;
+}
+
+.light {
+    font-weight: 400;
+}
+
+
+
+/* Header section */
+.head, .data {
+    margin: 10px 0;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 375px;
+}
+
+@media only screen and (max-width: 600px) {
+    .head, .data {
+        margin: 10px;
+        border-radius: 10px;
+        padding: 20px;
+        max-width: 375px;
+    }
+}
+
+.head {
+    display: flex;
+    justify-content: space-between;
+    color: var(--pale-orange);
+}
+
+/* Chart Section */
+
+.chart {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin: 1em 0;
+}
+
+.day-chart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Day numbers flex direction needs to be reversed for hover effect to show up */
+.day-numbers {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+.day-value {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2em;
+    width: 3em;
+    border-radius: .25em;
+    font-size: .6rem;
+    background: var(--pale-orange);
+    color: var(--pale-orange);
+    margin: .5em 0;
+    padding: 1em 2em;
+}
+
+.day-bar {
+    background: var(--soft-red);
+    width: 2em;
+    border-radius: .25em;
+}
+
+.day-bar:hover {
+    cursor: pointer;
+    opacity: .8;
+}
+
+.day-bar:active {
+    background: var(--cyan);
+}
+
+.day-bar:hover + .day-value {
+    background: var(--dark-brown);
+}
+
+.day {
+    font-size: smaller;
+    color: var(--medium-brown);
+}
+
+.line {
+    border: .5px solid var(--cream);
+    margin: 15px 0;
+}
+
+.spending {
+    display: flex;
+    justify-content: space-between;
+}
+
+#compare {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
+}
+
+#attribution, #attribution a {
+    font-size: 12px;
+    text-align: center;
+}
